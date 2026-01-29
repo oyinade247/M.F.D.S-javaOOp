@@ -63,11 +63,11 @@ public class DispenserTest {
         Fuel petrol = new Fuel("Petrol", 150, 100);
 
         dispenser.addNewFuel(petrol);
-        Transaction t = dispenser.dispenseFuelByAmount("Petrol", 300);
+        Transaction transaction = dispenser.dispenseFuelByAmount("Petrol", 300);
 
-        assertEquals("Petrol", t.getFuelName());
-        assertEquals(2, t.getLiters());
-        assertEquals(300, t.getAmount());
+        assertEquals("Petrol", transaction.getFuelName());
+        assertEquals(2, transaction.getLiters());
+        assertEquals(300, transaction.getAmount());
         assertEquals(98, petrol.getQuantity());
     }
 }
